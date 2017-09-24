@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _SINGLETON_H
-#define _SINGLETON_H
 
 // This boilerplate code was taken from
 // https://gist.github.com/daniebker/2299755
@@ -45,5 +43,3 @@ void Singleton<T>::Destroy()
 	delete Singleton<T>::m_instance;
 	Singleton<T>::m_instance = 0;
 }
-
-#endif

@@ -1,6 +1,4 @@
 #pragma once
-#ifndef __DAVIES_SDL_APP_PLAYER_ENTITY_HEADER__
-#define __DAVIES_SDL_APP_PLAYER_ENTITY_HEADER__
 
 #include "Entity.h"
 
@@ -11,5 +9,6 @@ public:
 
 	void Init();
 	void Update();
+	void Render() {}
+	void Destroy() {}
 };
-#endif//__DAVIES_SDL_APP_PLAYER_ENTITY_HEADER__

@@ -1,6 +1,4 @@
 #pragma once
-#ifndef __DAVIES_SDL_APP_ENTITY_HEADER__
-#define __DAVIES_SDL_APP_ENTITY_HEADER__
 
 #include <vector>
 #include "Component.h"
@@ -10,15 +8,15 @@ class Entity
 private:
 	Entity();
 	std::vector<Component*> m_listComponents;
-	int m_id;
-	bool m_active;
+	int m_iID;
+	bool m_bActive;
 
 public:
-	Entity(int in_id) : m_id(in_id), m_active(true) {}
+	Entity(int in_id) : m_iID(in_id), m_bActive(true) {}
 
-	inline int GetID() const { return m_id; }
-	inline bool IsActive() const { return m_active; }
-	inline void SetActive(bool in_active) { m_active = in_active; }
+	inline int GetID() const { return m_iID; }
+	inline bool IsActive() const { return m_bActive; }
+	inline void SetActive(bool in_active) { m_bActive = in_active; }
 
 	template <class T>
 	T* AddComponent()
@@ -62,9 +60,8 @@ public:
 	void InternalUpdate();
 	void InternalRender();
 
-	virtual void Init() {}
-	virtual void Destroy() {}
-	virtual void Update() {}
-	virtual void Render() {}
+	virtual void Init() = 0;
+	virtual void Destroy() = 0;
+	virtual void Update() = 0;
+	virtual void Render() = 0;
 };
-#endif//__DAVIES_SDL_APP_ENTITY_HEADER__

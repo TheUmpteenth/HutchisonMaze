@@ -1,6 +1,4 @@
 #pragma once
-#ifndef __DAVIES_SPRITE_COMPONENT_HEADER__
-#define __DAVIES_SPRITE_COMPONENT_HEADER__
 
 #include "TransformComponent.h"
 #include "Component.h"
@@ -12,8 +10,8 @@ private:
 	const char* m_subTextureID;
 
 	TransformComponent* m_pTransform;
-	int width;
-	int height;
+	int m_iWidth;
+	int m_iHeight;
 
 	SDL_Rect m_rectDestination;
 
@@ -21,6 +19,5 @@ public:
 	void Init();
 	void Update();
 	void Render();
+	void Destroy() {}
 };
-
-#endif//__DAVIES_SPRITE_COMPONENT_HEADER__

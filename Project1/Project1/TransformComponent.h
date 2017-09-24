@@ -1,12 +1,11 @@
 #pragma once
-#ifndef __DAVIES_TRANSFORM_COMPONENT_HEADER__
-#define __DAVIES_TRANSFORM_COMPONENT_HEADER__
 
 #include "Component.h"
 
 class TransformComponent : public Component
 {
 	//yeah, I know, encapsulation, but come on, these are going to be constantly accessed.
+	//also, it goes against the Hungarian notation a bit. This one always feels like a fight between OCD and convenince.
 public:
 	int x;
 	int y;
@@ -16,6 +15,8 @@ public:
 		x = 0;
 		y = 0;
 	}
-};
 
-#endif//__DAVIES_TRANSFORM_COMPONENT_HEADER__
+	void Destroy() {}
+	void Update() {}
+	void Render() {}
+};

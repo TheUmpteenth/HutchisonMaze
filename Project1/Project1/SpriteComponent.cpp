@@ -8,15 +8,15 @@ void SpriteComponent::Init()
 {
 	m_pTransform = m_pParent->GetComponent<TransformComponent>();
 	m_subTextureID = "logo";
-	height = width = 100;
+	m_iHeight = m_iWidth = 100;
 }
 
 void SpriteComponent::Update()
 {
 	m_rectDestination.x = m_pTransform->x;
 	m_rectDestination.y = m_pTransform->y;
-	m_rectDestination.h = height;
-	m_rectDestination.w = width;
+	m_rectDestination.h = m_iHeight;
+	m_rectDestination.w = m_iWidth;
 }
 
 void SpriteComponent::Render()
