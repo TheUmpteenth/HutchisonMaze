@@ -1,6 +1,4 @@
 #pragma once
-#ifndef __DAVIES_SDL_APP_ENTITY_MANAGER_HEADER__
-#define __DAVIES_SDL_APP_ENTITY_MANAGER_HEADER__
 
 #include "Singleton.h"
 #include "Entity.h"
@@ -26,4 +24,3 @@ public:
 	void Update();
 	void Render();
 };
-#endif//__DAVIES_SDL_APP_ENTITY_MANAGER_HEADER__
