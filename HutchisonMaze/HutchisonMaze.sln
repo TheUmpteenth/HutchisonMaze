@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{730E5573-A0E9-40C5-A290-9B7E63102874}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HutchisonMaze", "HutchisonMaze\HutchisonMaze.vcxproj", "{730E5573-A0E9-40C5-A290-9B7E63102874}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB658DE6-DAD2-4E66-B045-080739D4EFE5}"
 	ProjectSection(SolutionItems) = preProject
-		Project1\libpng16-16.dll = Project1\libpng16-16.dll
-		Project1\SDL2.dll = Project1\SDL2.dll
-		Project1\SDL2_image.dll = Project1\SDL2_image.dll
-		Project1\zlib1.dll = Project1\zlib1.dll
+		HutchisonMaze\libpng16-16.dll = HutchisonMaze\libpng16-16.dll
+		HutchisonMaze\SDL2.dll = HutchisonMaze\SDL2.dll
+		HutchisonMaze\SDL2_image.dll = HutchisonMaze\SDL2_image.dll
+		HutchisonMaze\zlib1.dll = HutchisonMaze\zlib1.dll
 	EndProjectSection
 EndProject
 Global
@@ -21,12 +21,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{730E5573-A0E9-40C5-A290-9B7E63102874}.Debug|x64.ActiveCfg = Debug|x64
-		{730E5573-A0E9-40C5-A290-9B7E63102874}.Debug|x64.Build.0 = Debug|x64
+		{730E5573-A0E9-40C5-A290-9B7E63102874}.Debug|x64.ActiveCfg = Debug|Win32
 		{730E5573-A0E9-40C5-A290-9B7E63102874}.Debug|x86.ActiveCfg = Debug|Win32
 		{730E5573-A0E9-40C5-A290-9B7E63102874}.Debug|x86.Build.0 = Debug|Win32
-		{730E5573-A0E9-40C5-A290-9B7E63102874}.Release|x64.ActiveCfg = Release|x64
-		{730E5573-A0E9-40C5-A290-9B7E63102874}.Release|x64.Build.0 = Release|x64
+		{730E5573-A0E9-40C5-A290-9B7E63102874}.Release|x64.ActiveCfg = Release|Win32
 		{730E5573-A0E9-40C5-A290-9B7E63102874}.Release|x86.ActiveCfg = Release|Win32
 		{730E5573-A0E9-40C5-A290-9B7E63102874}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

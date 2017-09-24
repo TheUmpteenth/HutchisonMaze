@@ -9,8 +9,11 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # VS folders
-*Release/*
-*.vs/*
+Debug/
+Release/
+HutchisonMaze/.vs/
+HutchisonMaze/Debug/
+HutchisonMaze/Release/
 
 # Windows Installer files
 *.cab
