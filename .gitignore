@@ -8,11 +8,22 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# VS folders
+Debug/
+Release/
+HutchisonMaze/.vs/
+HutchisonMaze/Debug/
+HutchisonMaze/Release/
+
 # Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
+
+# Executables
+*.exe
+*.pdb
 
 # Windows shortcuts
 *.lnk
