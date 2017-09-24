@@ -1,13 +1,14 @@
 #include "SpriteComponent.h"
 #include "TransformComponent.h"
-#include "TextureUtils.h"
+#include "TextureManager.h"
 #include "Entity.h"
 
 
 void SpriteComponent::Init()
 {
 	m_pTransform = m_pParent->GetComponent<TransformComponent>();
-	m_pTexture = TextureUtils::LoadTexture("assets/image.png");
+	m_subTextureID = "logo";
+	height = width = 100;
 }
 
 void SpriteComponent::Update()
@@ -20,5 +21,5 @@ void SpriteComponent::Update()
 
 void SpriteComponent::Render()
 {
-	SDL_RenderCopy(SDLApp::GetInstance()->GetRenderer(), m_pTexture, NULL, &m_rectDestination);
+	TextureManager::GetInstance()->AddToDrawList(m_subTextureID, m_rectDestination);
 }

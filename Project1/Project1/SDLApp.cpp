@@ -1,6 +1,7 @@
 #include "SDL.h"
 #include "SDLApp.h"
 #include "EntityManager.h"
+#include "TextureManager.h"
 #include "Player.h"
 
 SDLApp::SDLApp()
@@ -72,5 +73,6 @@ void SDLApp::Render()
 	//	SDL_SetRenderDrawColor(m_pRenderer, 0, 255, 0, 255);
 	SDL_RenderClear(m_pRenderer);
 	EntityManager::GetInstance()->Render();
+	TextureManager::GetInstance()->Render();
 	SDL_RenderPresent(m_pRenderer);
 }

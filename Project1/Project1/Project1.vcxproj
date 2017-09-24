@@ -23,6 +23,7 @@
     <ProjectGuid>{730E5573-A0E9-40C5-A290-9B7E63102874}</ProjectGuid>
     <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <ProjectName>HutchisonMaze</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,7 +124,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLApp.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
-    <ClCompile Include="TextureUtils.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h" />
@@ -133,8 +134,7 @@
     <ClInclude Include="SDLApp.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="SpriteComponent.h" />
-    <ClInclude Include="SpriteManager.h" />
-    <ClInclude Include="TextureUtils.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TransformComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

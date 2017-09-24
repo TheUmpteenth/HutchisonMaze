@@ -4,15 +4,17 @@
 
 #include "TransformComponent.h"
 #include "Component.h"
-#include "SDL_image.h"
+#include "SDL_rect.h"
 
 class SpriteComponent : public Component
 {
 private:
-	SDL_Texture* m_pTexture;
+	const char* m_subTextureID;
+
 	TransformComponent* m_pTransform;
 	int width;
 	int height;
+
 	SDL_Rect m_rectDestination;
 
 public:
