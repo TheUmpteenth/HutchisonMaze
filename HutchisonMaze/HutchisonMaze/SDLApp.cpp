@@ -48,10 +48,9 @@ void SDLApp::Init(const char* in_title, int in_width, int in_height, bool in_ful
 
 void SDLApp::HandleEvents()
 {
-	SDL_Event event;
-	SDL_PollEvent(&event);
+	SDL_PollEvent(&m_event);
 
-	switch (event.type)
+	switch (m_event.type)
 	{
 		case SDL_QUIT:
 			std::cout << "SDL recieved quit signal" << std::endl;

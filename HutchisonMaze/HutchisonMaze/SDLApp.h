@@ -11,6 +11,7 @@ private:
 	SDL_Window* m_pWindow;
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
+	SDL_Event m_event;
 
 public:
 	SDLApp();
@@ -24,4 +25,5 @@ public:
 	inline bool IsRunning() const { return m_bRunning; }
 	inline SDL_Window* GetWindow() const { return m_pWindow; }
 	inline SDL_Renderer* GetRenderer() const { return m_pRenderer; }
+	inline SDL_Event GetEvent() const { return m_event; }
 };
