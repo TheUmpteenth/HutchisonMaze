@@ -3,11 +3,12 @@
 #include "TransformComponent.h"
 #include "Component.h"
 #include "SDL_rect.h"
+#include <string>
 
 class SpriteComponent : public Component
 {
 private:
-	const char* m_subTextureID;
+	std::string m_subTextureID;
 
 	TransformComponent* m_pTransform;
 	int m_iWidth;

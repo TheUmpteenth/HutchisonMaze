@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Entities">
       <UniqueIdentifier>{40960e8d-900e-4899-8191-43ad3af3161d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Core\tinyXML">
+      <UniqueIdentifier>{b1a028ac-a146-4d05-8708-5b1207c4193a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\tinyXML">
+      <UniqueIdentifier>{065fe31d-e9d0-41a3-9b7a-9b8d081e2404}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entity.cpp">
@@ -59,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
       <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXML\tinyxml2.cpp">
+      <Filter>Source Files\Core\tinyXML</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="TextureManager.h">
       <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXML\tinyxml2.h">
+      <Filter>Header Files\Core\tinyXML</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
