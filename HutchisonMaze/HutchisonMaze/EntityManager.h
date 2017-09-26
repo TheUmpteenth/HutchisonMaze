@@ -12,6 +12,7 @@ private:
 
 	void AddEntity(Entity* in_entity);
 public:
+	~EntityManager();
 	template <class T>
 	T* CreateEntity()
 	{
@@ -23,4 +24,5 @@ public:
 	void DestroyEntity(const Entity& in_entity);
 	void Update();
 	void Render();
+	void DestroyAllEntites();
 };

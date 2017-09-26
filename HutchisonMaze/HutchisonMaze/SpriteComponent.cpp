@@ -8,7 +8,7 @@ void SpriteComponent::Init()
 {
 	m_pTransform = m_pParent->GetComponent<TransformComponent>();
 	m_subTextureID = "logo";
-	m_iHeight = m_iWidth = 100;
+	m_iHeight = m_iWidth = 16;
 }
 
 void SpriteComponent::Update()

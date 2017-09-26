@@ -1,11 +1,9 @@
-#include "Player.h"
+#include "WallEntity.h"
 #include "SpriteComponent.h"
 #include "TransformComponent.h"
-#include "InputHandlingComponent.h"
 
-void Player::Init()
+void WallEntity::Init()
 {
 	AddComponent<TransformComponent>();
 	AddComponent<SpriteComponent>();
-	AddComponent<InputHandlingComponent>();
 }

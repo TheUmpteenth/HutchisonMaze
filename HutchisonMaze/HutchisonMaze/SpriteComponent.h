@@ -20,5 +20,5 @@ public:
 	void Init();
 	void Update();
 	void Render();
-	void Destroy() {}
+	void Destroy() { m_pTransform = NULL; }
 };

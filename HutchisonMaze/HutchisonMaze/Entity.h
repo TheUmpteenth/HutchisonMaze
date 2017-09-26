@@ -52,13 +52,16 @@ public:
 			T* castComponent = dynamic_cast<T*>(component);
 			if (castComponent != NULL)
 			{
+				castComponent.Destroy();
 				m_listComponents.erase(it);
+				delete component;
 				break;
 			}
 		}
 	}
 	void InternalUpdate();
 	void InternalRender();
+	void DestroyAllComponents();
 
 	virtual void Init() = 0;
 	virtual void Destroy() = 0;

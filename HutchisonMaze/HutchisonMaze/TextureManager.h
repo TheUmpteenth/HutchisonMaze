@@ -26,6 +26,7 @@ private:
 
 public:
 	TextureManager();
+	~TextureManager();
 
 	SDL_Texture* LoadTexture(std::string in_texturePath);
 	void LoadAtlas(std::string in_texturePath);
