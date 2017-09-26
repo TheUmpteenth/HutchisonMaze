@@ -3,6 +3,7 @@
 #include "EntityManager.h"
 #include "TextureManager.h"
 #include "Player.h"
+#include "Maze.h"
 
 SDLApp::SDLApp()
 {
@@ -21,7 +22,10 @@ SDLApp::~SDLApp()
 	{
 		SDL_DestroyRenderer(m_pRenderer);
 	}
+	EntityManager::GetInstance()->Destroy();
+	TextureManager::GetInstance()->Destroy();
 	SDL_Quit();
+
 	std::cout << "SDL App Destroyed" << std::endl;
 }
 
@@ -44,6 +48,7 @@ void SDLApp::Init(const char* in_title, int in_width, int in_height, bool in_ful
 	m_bRunning = true;
 
 	Player* player = EntityManager::GetInstance()->CreateEntity<Player>();
+	Maze* maze = new Maze();
 }
 
 void SDLApp::HandleEvents()

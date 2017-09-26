@@ -37,6 +37,7 @@ void InputHandlingComponent::Update()
 			break;
 		}
 	}
+
 	if (event.type == SDL_KEYUP)
 	{
 		switch (event.key.keysym.sym)

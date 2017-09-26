@@ -2,10 +2,10 @@
 
 #include "Entity.h"
 
-class Player : public Entity
+class WallEntity : public Entity
 {
 public:
-	Player(int in_id) : Entity(in_id) {}
+	WallEntity(int in_id) : Entity(in_id) {}
 
 	void Init();
 	void Update() {}

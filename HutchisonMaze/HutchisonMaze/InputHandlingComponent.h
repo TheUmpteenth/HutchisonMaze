@@ -12,7 +12,7 @@ private:
 
 public:
 	void Init();
-	void Destroy() {}
+	void Destroy() { m_pTransform = 0; }
 	void Update();
 	void Render() {}
 };

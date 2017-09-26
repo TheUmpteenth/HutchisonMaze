@@ -7,6 +7,25 @@ TextureManager::TextureManager()
 	LoadAtlas("assets/atlasTest.xml");
 }
 
+TextureManager::~TextureManager()
+{
+	for (std::vector<Sprite*>::iterator it = m_listDrawList.begin(); it != m_listDrawList.end(); ++it)
+	{
+		Sprite* sprite = *it;
+		delete sprite;
+	}
+	for (std::map<std::string, SubTexture*>::iterator it = m_mapSubTextures.begin(); it != m_mapSubTextures.end(); ++it)
+	{
+		SubTexture* sub = it->second;
+		delete sub;
+	}
+	for (std::map<std::string, SDL_Texture*>::iterator it = m_mapTextures.begin(); it != m_mapTextures.end(); ++it)
+	{
+		SDL_Texture* texture = it->second;
+		SDL_DestroyTexture(texture);
+	}
+}
+
 void TextureManager::LoadAtlas(std::string in_atlasFilePath)
 {
 	tinyxml2::XMLDocument doc;

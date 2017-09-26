@@ -27,3 +27,15 @@ void Entity::InternalRender()
 		}
 	}
 }
+
+void Entity::DestroyAllComponents()
+{
+	Render();
+	for (std::vector<Component*>::iterator it = m_listComponents.begin(); it != m_listComponents.end(); ++it)
+	{
+		Component* component = *it;
+		component->Destroy();
+		delete component;
+	}
+	m_listComponents.clear();
+}
