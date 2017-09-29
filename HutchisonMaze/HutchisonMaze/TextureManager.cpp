@@ -87,6 +87,8 @@ void TextureManager::AddToDrawList(std::string in_subTextureID, SDL_Rect in_spri
 	m_listDrawList.insert(it, newSprite);
 }
 
+//This render loop could be improved, firstly by the use of SDL_BlitSurface, secondly by examining how SDL handles batching.
+//It's also probably overkill for this project that I clear and rebuild the list every frame, but it would be needed for a more dynamic scene
 void TextureManager::Render()
 {
 	for (std::vector<Sprite*>::iterator it = m_listDrawList.begin(); it != m_listDrawList.end(); ++it)

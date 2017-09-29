@@ -7,7 +7,7 @@ void InputHandlingComponent::Init()
 {
 	m_pTransform = m_pParent->GetComponent<TransformComponent>();
 	m_fSpeed = 1.0f;
-	m_fVelocityX = m_fVelocityY = 0.0f;
+	m_vVelocity = Vector2D::Zero;
 }
 
 void InputHandlingComponent::Update()
@@ -20,19 +20,19 @@ void InputHandlingComponent::Update()
 		{
 		case SDLK_w:
 		case SDLK_UP:
-			m_fVelocityY = -m_fSpeed;
+			m_vVelocity.y = -m_fSpeed;
 			break;
 		case SDLK_s:
 		case SDLK_DOWN:
-			m_fVelocityY = m_fSpeed;
+			m_vVelocity.y = m_fSpeed;
 			break;
 		case SDLK_a:
 		case SDLK_LEFT:
-			m_fVelocityX = -m_fSpeed;
+			m_vVelocity.x = -m_fSpeed;
 			break;
 		case SDLK_d:
 		case SDLK_RIGHT:
-			m_fVelocityX = m_fSpeed;
+			m_vVelocity.x = m_fSpeed;
 			break;
 		default:
 			break;
@@ -45,25 +45,20 @@ void InputHandlingComponent::Update()
 		{
 		case SDLK_w:
 		case SDLK_UP:
-			m_fVelocityY = 0;
-			break;
 		case SDLK_s:
 		case SDLK_DOWN:
-			m_fVelocityY = 0;
+			m_vVelocity.y = 0;
 			break;
 		case SDLK_a:
 		case SDLK_LEFT:
-			m_fVelocityX = 0;
-			break;
 		case SDLK_d:
 		case SDLK_RIGHT:
-			m_fVelocityX = 0;
+			m_vVelocity.x = 0;
 			break;
 		default:
 			break;
 		}
 	}
 
-	m_pTransform->m_vPosition.x += m_fVelocityX;
-	m_pTransform->m_vPosition.y += m_fVelocityY;
+	m_pTransform->m_vPosition += m_vVelocity;
 }
