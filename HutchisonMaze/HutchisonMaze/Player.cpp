@@ -7,8 +7,17 @@
 
 void Player::Init()
 {
-	AddComponent<TransformComponent>();
-	AddComponent<SpriteComponent>();
+	TransformComponent* pTransform = AddComponent<TransformComponent>();
+	pTransform->m_vPosition.x = 22.0f;
+	pTransform->m_vPosition.y = 22.0f;
+
+	SpriteComponent* sprite = AddComponent<SpriteComponent>();
+	sprite->SetSubTexture("logo");
+	Vector2D size;
+	size.x = 16.0f;
+	size.y = 16.0f;
+	sprite->SetSize(size);
+
 	m_pInputHandler = AddComponent<InputHandlingComponent>();
 	ColliderComponent* collider = AddComponent<ColliderComponent>();
 	collider->SetCollisionLayer(COLLISION_LAYER_PLAYER);
@@ -46,6 +55,5 @@ void Player::OnCollision(const ColliderComponent& in_colliderHit)
 		}
 	}
 
-	m_pInputHandler->m_fVelocityX = 0.0f;
-	m_pInputHandler->m_fVelocityY = 0.0f;
+	m_pInputHandler->SetVelocity(Vector2D::Zero);
 }

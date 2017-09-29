@@ -7,8 +7,8 @@ class Entity;
 class Maze
 {
 private:
-	const int TILE_WIDTH = 16;
-	const int TILE_HEIGHT = 16;
+	const int TILE_WIDTH = 20;
+	const int TILE_HEIGHT = 20;
 	const int MAX_WIDTH = 128;
 	const int MAX_HEIGHT = 128;
 	const int MAX_TILES = MAX_WIDTH * MAX_HEIGHT;

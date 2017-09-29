@@ -7,6 +7,13 @@
 void WallEntity::Init()
 {
 	AddComponent<TransformComponent>();
-	AddComponent<SpriteComponent>();
+
+	SpriteComponent* sprite = AddComponent<SpriteComponent>();
+	sprite->SetSubTexture("wall");
+	Vector2D size;
+	size.x = 20.0f;
+	size.y = 20.0f;
+	sprite->SetSize(size);
+
 	AddComponent<ColliderComponent>()->SetCollisionLayer(COLLISION_LAYER_WALL);
 }

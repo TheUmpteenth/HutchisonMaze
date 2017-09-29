@@ -2,6 +2,9 @@
 
 class Entity;
 
+//I saw some nice code for indexing these that involved declaring a static int from within a function, but wasn't convinced that it would be compliant pre c++11
+//TODO: switch to this type of indexing as an optimisation, it will eliminate the slow dynamic_cast
+
 class Component
 {
 private:

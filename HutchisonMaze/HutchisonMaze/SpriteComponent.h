@@ -2,6 +2,7 @@
 #include "Component.h"
 #include <string>
 #include <SDL.h>
+#include "Vector2D.h"
 
 class TransformComponent;
 
@@ -14,8 +15,7 @@ private:
 	//TransformComponent* m_pTransform {nullptr}
 	TransformComponent* m_pTransform = NULL;
 
-	int m_iWidth = 0;
-	int m_iHeight = 0;
+	Vector2D m_vSize = Vector2D::Zero;
 
 	SDL_Rect m_rectDestination;
 
@@ -25,4 +25,8 @@ public:
 	void Update();
 	void Render();
 	void Destroy() { m_pTransform = NULL; }
+
+	inline Vector2D GetSize() const { return m_vSize; }
+	void SetSize(const Vector2D& in_vSize);
+	inline void SetSubTexture(std::string in_subTextureID) { m_subTextureID = in_subTextureID; }
 };

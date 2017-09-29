@@ -5,6 +5,8 @@
 #include "SDL_image.h"
 #include <iostream>
 
+class Maze;
+
 //TODO: Ideally, I'd break off a game class, where game logic would live apart from the app code.
 //if I have time, I will do so
 class SDLApp : public Singleton<SDLApp>
@@ -14,6 +16,8 @@ private:
 	SDL_Renderer* m_pRenderer = NULL;
 	bool m_bRunning = false;
 	SDL_Event m_event;
+
+	Maze* m_pMaze = NULL;//This should be part of a game class and not here
 
 public:
 	SDLApp();

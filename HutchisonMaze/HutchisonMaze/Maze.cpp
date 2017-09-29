@@ -3,6 +3,7 @@
 #include "EntityManager.h"
 #include "WallEntity.h"
 #include "TransformComponent.h"
+#include "SpriteComponent.h"
 #include <iostream>
 
 
@@ -46,13 +47,21 @@ void Maze::CreateTileEntity(int in_iType, int in_iGridX, int in_iGridY)
 {
 	WallEntity* wall;
 	TransformComponent* wallTransform;
+	SpriteComponent* wallSprite;
+	Vector2D vTileSize;
+	vTileSize.x = (float)TILE_WIDTH;
+	vTileSize.y = (float)TILE_HEIGHT;
 	switch (in_iType)
 	{
 	case 1:
 		wall = EntityManager::GetInstance()->CreateEntity<WallEntity>();
+
+		wallSprite = wall->GetComponent<SpriteComponent>();
+		wallSprite->SetSize(vTileSize);
+
 		wallTransform = wall->GetComponent<TransformComponent>();
-		wallTransform->m_vPosition.x = in_iGridX * TILE_WIDTH;
-		wallTransform->m_vPosition.y = in_iGridY * TILE_HEIGHT;
+		wallTransform->m_vPosition.x = (float)(in_iGridX * TILE_WIDTH);
+		wallTransform->m_vPosition.y = (float)(in_iGridY * TILE_HEIGHT);
 		m_listEntities.push_back(wall);
 		break;
 	default:
