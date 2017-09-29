@@ -5,10 +5,10 @@ class Entity;
 class Component
 {
 private:
-	bool m_bActive;
+	bool m_bActive = false;
 
 protected:
-	Entity* m_pParent;
+	Entity* m_pParent = 0;
 
 public:
 	Component() : m_bActive(true) {};

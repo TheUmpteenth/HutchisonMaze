@@ -95,6 +95,8 @@ void TextureManager::Render()
 		SubTexture* subTexture = GetSubTexture(sprite->m_szSubTextureID);
 
 		SDL_RenderCopy(SDLApp::GetInstance()->GetRenderer(), GetTexture(subTexture->m_szTextureID), subTexture->m_rectSource, &sprite->m_rectDestination);
+
+		delete sprite;
 	}
 	m_listDrawList.clear();
 }

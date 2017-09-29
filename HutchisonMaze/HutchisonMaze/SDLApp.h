@@ -5,12 +5,14 @@
 #include "SDL_image.h"
 #include <iostream>
 
+//TODO: Ideally, I'd break off a game class, where game logic would live apart from the app code.
+//if I have time, I will do so
 class SDLApp : public Singleton<SDLApp>
 {
 private:
-	SDL_Window* m_pWindow;
-	SDL_Renderer* m_pRenderer;
-	bool m_bRunning;
+	SDL_Window* m_pWindow = NULL;
+	SDL_Renderer* m_pRenderer = NULL;
+	bool m_bRunning = false;
 	SDL_Event m_event;
 
 public:

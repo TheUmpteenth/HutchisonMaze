@@ -1,7 +1,8 @@
 #pragma once
 #include "tinyXML\tinyxml2.h"
 #include <vector>
-#include "Entity.h"
+
+class Entity;
 
 class Maze
 {
@@ -12,10 +13,10 @@ private:
 	const int MAX_HEIGHT = 128;
 	const int MAX_TILES = MAX_WIDTH * MAX_HEIGHT;
 
-	int m_width;
-	int m_height;
+	int m_width = 0;
+	int m_height = 0;
 
-	int* m_arriMazeData;
+	int* m_arriMazeData = NULL;
 
 	std::vector<Entity*> m_listEntities;
 

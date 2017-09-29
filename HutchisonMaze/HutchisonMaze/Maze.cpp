@@ -51,8 +51,8 @@ void Maze::CreateTileEntity(int in_iType, int in_iGridX, int in_iGridY)
 	case 1:
 		wall = EntityManager::GetInstance()->CreateEntity<WallEntity>();
 		wallTransform = wall->GetComponent<TransformComponent>();
-		wallTransform->x = in_iGridX * TILE_WIDTH;
-		wallTransform->y = in_iGridY * TILE_HEIGHT;
+		wallTransform->m_vPosition.x = in_iGridX * TILE_WIDTH;
+		wallTransform->m_vPosition.y = in_iGridY * TILE_HEIGHT;
 		m_listEntities.push_back(wall);
 		break;
 	default:
