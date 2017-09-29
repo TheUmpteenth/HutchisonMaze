@@ -11,4 +11,5 @@ public:
 	void Update() {}
 	void Render() {}
 	void Destroy() {}
+	void OnCollision(const ColliderComponent& in_colliderHit) {}
 };

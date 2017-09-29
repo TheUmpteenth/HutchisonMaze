@@ -1,6 +1,7 @@
 #include "InputHandlingComponent.h"
 #include "Entity.h"
 #include "SDLApp.h"
+#include "TransformComponent.h"
 
 void InputHandlingComponent::Init()
 {
@@ -63,6 +64,6 @@ void InputHandlingComponent::Update()
 		}
 	}
 
-	m_pTransform->x += m_fVelocityX;
-	m_pTransform->y += m_fVelocityY;
+	m_pTransform->m_vPosition.x += m_fVelocityX;
+	m_pTransform->m_vPosition.y += m_fVelocityY;
 }

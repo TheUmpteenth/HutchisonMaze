@@ -7,7 +7,7 @@
 class EntityManager : public Singleton<EntityManager>
 {
 private:
-	int m_iLastID;
+	int m_iLastID = false;
 	std::vector<Entity*> m_listEntities;
 
 	void AddEntity(Entity* in_entity);

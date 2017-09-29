@@ -14,9 +14,10 @@ struct Sprite
 struct SubTexture
 {
 	std::string m_szTextureID;
-	SDL_Rect* m_rectSource;
+	SDL_Rect* m_rectSource = NULL;
 };
 
+//this was originally split into Sprite and Texture Managers, with the potential for a third Draw List Manager, but I unified it to avoid overcomplicating the SDLApp class and overuse of Singletons
 class TextureManager : public Singleton<TextureManager>
 {
 private:

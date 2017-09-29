@@ -1,22 +1,26 @@
 #pragma once
-
-#include "TransformComponent.h"
 #include "Component.h"
-#include "SDL_rect.h"
 #include <string>
+#include <SDL.h>
+
+class TransformComponent;
 
 class SpriteComponent : public Component
 {
 private:
 	std::string m_subTextureID;
 
-	TransformComponent* m_pTransform;
-	int m_iWidth;
-	int m_iHeight;
+	//note c++11 stye init would be 
+	//TransformComponent* m_pTransform {nullptr}
+	TransformComponent* m_pTransform = NULL;
+
+	int m_iWidth = 0;
+	int m_iHeight = 0;
 
 	SDL_Rect m_rectDestination;
 
 public:
+	inline SDL_Rect GetDrawRect() const { return m_rectDestination; }
 	void Init();
 	void Update();
 	void Render();

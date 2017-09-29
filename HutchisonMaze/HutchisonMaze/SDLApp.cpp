@@ -2,6 +2,7 @@
 #include "SDLApp.h"
 #include "EntityManager.h"
 #include "TextureManager.h"
+#include "CollisionManager.h"
 #include "Player.h"
 #include "Maze.h"
 
@@ -24,6 +25,7 @@ SDLApp::~SDLApp()
 	}
 	EntityManager::GetInstance()->Destroy();
 	TextureManager::GetInstance()->Destroy();
+	CollisionManager::GetInstance()->Destroy();
 	SDL_Quit();
 
 	std::cout << "SDL App Destroyed" << std::endl;
@@ -49,6 +51,8 @@ void SDLApp::Init(const char* in_title, int in_width, int in_height, bool in_ful
 
 	Player* player = EntityManager::GetInstance()->CreateEntity<Player>();
 	Maze* maze = new Maze();
+	std::vector<CollisionLayer> vec = { COLLISION_LAYER_WALL };
+	CollisionManager::GetInstance()->SetupCollisionLayer(COLLISION_LAYER_PLAYER, vec);
 }
 
 void SDLApp::HandleEvents()
@@ -70,6 +74,7 @@ void SDLApp::HandleEvents()
 void SDLApp::Update()
 {
 	EntityManager::GetInstance()->Update();
+	CollisionManager::GetInstance()->Update();
 }
 
 void SDLApp::Render()
